@@ -40,6 +40,12 @@ const filteredTodos = {
       </button>
     </div>
 
+    <div class="flex gap-4 mb-4 text-sm dark:text-gray-300">
+      <span>Total: <strong>{{ todoStore.totalTodos }}</strong></span>
+      <span>Pending: <strong>{{ todoStore.pendingTodos.length }}</strong></span>
+      <span>Completed: <strong>{{ todoStore.completedTodos.length }}</strong></span>
+    </div>
+
     <div class="flex gap-2 mb-4">
       <button
         v-for="f in ['all', 'pending', 'completed']"

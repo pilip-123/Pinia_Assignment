@@ -4,11 +4,11 @@ export const useUserStore = defineStore("user", {
 
 state:()=>({
 
-name:"John",
+name:"Pilip yom",
 
 age:20,
 
-email:"john@gmail.com"
+email:"pilipyom@gmail.com"
 
 }),
 

@@ -12,7 +12,7 @@ export const useCartStore = defineStore("cart", {
 
   getters: {
     totalPrice: (state) => state.cart.reduce((sum, item) => sum + item.price, 0),
-    cartCount: (state) => state.cart.length,
+    totalItems: (state) => state.cart.length,
   },
 
   actions: {
@@ -21,6 +21,9 @@ export const useCartStore = defineStore("cart", {
     },
     removeFromCart(productId) {
       this.cart = this.cart.filter((item) => item.id !== productId);
+    },
+    clearCart() {
+      this.cart = [];
     },
   },
 });

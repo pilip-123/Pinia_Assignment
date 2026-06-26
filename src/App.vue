@@ -6,6 +6,7 @@ import Users from "./components/Users.vue";
 import TodoList from "./components/TodoList.vue";
 import Shopping from "./components/Shopping.vue";
 import ThemeSwitcher from "./components/ThemeSwitcher.vue";
+import StudentManager from "./components/StudentManager.vue";
 
 const theme = useThemeStore();
 
@@ -22,6 +23,7 @@ onMounted(() => {
       <Users />
       <TodoList />
       <Shopping />
+      <StudentManager />
     </div>
   </div>
 </template>

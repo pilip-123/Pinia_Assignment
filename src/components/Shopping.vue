@@ -29,7 +29,7 @@ const cart = useCartStore();
 
     <div>
       <h3 class="text-lg font-semibold mb-2 dark:text-white">
-        Cart ({{ cart.cartCount }} items)
+        Cart ({{ cart.totalItems }} items)
       </h3>
       <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Total: ${{ cart.totalPrice }}</p>
       <div v-if="cart.cart.length" class="space-y-2">
@@ -46,6 +46,12 @@ const cart = useCartStore();
             Remove
           </button>
         </div>
+        <button
+          class="bg-red-500 text-white px-3 py-1 rounded text-sm mt-2"
+          @click="cart.clearCart()"
+        >
+          Clear Cart
+        </button>
       </div>
       <p v-else class="text-gray-500 dark:text-gray-400">Cart is empty.</p>
     </div>
